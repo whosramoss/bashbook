@@ -38,7 +38,6 @@ function sdx_has_tool() {
   fi
 
   sdx_log_dark_gray "--------------"
-  echo
 }
 
 # -------------------------------------------------------
@@ -51,7 +50,7 @@ function sdx_summary_tool_validation() {
   ROWS=(
     "$((VT_SUCCESS_COUNT + VT_ERROR_COUNT))|$VT_SUCCESS_COUNT|$VT_ERROR_COUNT"
   )
-  sdx_show_table "$HEADER" "${ROWS[@]}"
+  sdx_show_table_with_borders "$HEADER" "${ROWS[@]}"
   echo
   if [ ${#VT_SUCCESS_LIST[@]} -gt 0 ]; then
     sdx_log_icon_success "${WHITE}Successful tools${RESET}:"
@@ -62,7 +61,7 @@ function sdx_summary_tool_validation() {
   fi
 
   if [ ${#VT_ERROR_LIST[@]} -gt 0 ]; then
-    sdx_log_icon_error "${LIGHT_RED}Error tools${RESET}:"
+    sdx_log_icon_error "${WHITE}Error tools${RESET}:"
     for tool in "${VT_ERROR_LIST[@]}"; do
       sdx_log_light_red "  - $tool"
     done
