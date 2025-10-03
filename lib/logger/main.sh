@@ -120,7 +120,7 @@ function sdx_log_text_error()   { sdx_log_color sdx_log_light_red "[ERROR]" "$@"
 # Description :: Logs a question message.
 # -------------------------------------------------------
 function sdx_log_icon_question(){ sdx_log_color sdx_log_light_green "?" "${WHITE}$@${RESET}"; }
-function sdx_log_text_question(){ sdx_log_color sdx_log_light_green "[QUESTION]" "$@"; }
+function sdx_log_text_question(){ sdx_log_color sdx_log_purple "[QUESTION]" "$@"; }
 
 
 # -------------------------------------------------------
@@ -141,7 +141,7 @@ function sdx_log_section(){
 # -------------------------------------------------------
 function sdx_log_topic(){
   echo
-  echo -e "${WHITE}➤ $1${RESET} "
+  echo -e "${WHITE}➤  $1${RESET} "
   echo 
 }
 
