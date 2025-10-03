@@ -7,7 +7,7 @@
 # -------------------------------------------------------
 function sdx_linear_loading() {
     local input="$1"
-    local repeat=4   
+    local repeat=3   
     local delay=0.1   
 
     export LC_ALL=C.UTF-8
@@ -31,7 +31,7 @@ function sdx_linear_loading() {
             sleep "$delay"
         done
     done
-
+    echo
     echo 
 }
 
@@ -42,7 +42,7 @@ function sdx_linear_loading() {
 # -------------------------------------------------------
 function sdx_boomerang_loading() {
     local input="$1"
-    local delay=0.1  
+    local delay=0.05  
     export LC_ALL=C.UTF-8
 
     readarray -t chars < <(echo -n "$input" | grep -o .)
@@ -71,7 +71,8 @@ function sdx_boomerang_loading() {
         for frame in "${frames[@]}"; do
             clear
             echo "$frame"
-            sleep "$delay"
+            # sleep "$delay"
         done
     done
+    echo
 }
