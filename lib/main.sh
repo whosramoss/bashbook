@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "echo from main.sh"
+source "lib/logger/main.sh"
