@@ -16,6 +16,7 @@ options=(
     "View Step Functions"
     "View Validations Functions"
     "View Loading Functions"
+    "Build shelldx file"
 )
 
 files=(
@@ -25,6 +26,7 @@ files=(
     "lib/step/example.sh"
     "lib/validations/example.sh"
     "lib/loading/example.sh"
+    "scripts/build.sh"
 )
 
 sdx_set_menu options files
