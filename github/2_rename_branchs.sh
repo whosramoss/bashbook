@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # -------------------------------------------------------
-# FILE    :: 1_rename_branchs  
+# FILE    :: 2_rename_branchs  
 # Description :: Rename branchs - local and remote
 # Compatible with: Linux · Windows
 # -------------------------------------------------------
